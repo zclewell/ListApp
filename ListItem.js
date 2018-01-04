@@ -15,7 +15,7 @@ export default class ListItem extends React.Component {
       }
     }
     console.log(selected)
-    if (selected.contains(entry.Section) || !selected.size {
+    if (selected.has(entry.Section) || !selected.size) {
     return (
       <View style={styles.ListItem}>
         <Text style={[styles.ListItemSectionBox,{backgroundColor: color}]}>{entry.Section}</Text>

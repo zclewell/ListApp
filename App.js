@@ -21,11 +21,12 @@ export default class App extends React.Component {
 
   _updateRefine(key) {
     // console.log(key)
-    // if (this.state.selected.contains(key)) {
-    //   this.setState({ selected: this.state.selected.delete(key)})
-    // } else {
-    //   this.setState({ selected: this.state.selected.add(key)})
-    // }
+    var selected = this.state.selected
+    if (selected.has(key)) {
+      selected.delete(key)
+    } else {
+      selected.add(key)
+    }
     // console.log(this.state.selected)
   }
 

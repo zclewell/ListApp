@@ -13,8 +13,7 @@ export default class RefineButton extends React.Component {
 
   _toggle() {
     this.setState({enabled: !this.state.enabled})
-    // this.props.refineFunc(this.props.section)
-
+    this.props.refineFunc(this.props.section)
   }
 
   render() {
