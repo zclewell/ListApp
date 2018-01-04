@@ -9,6 +9,10 @@
 			"Section": "dairy"
 		},
 		{
+			"Name": "carrots",
+			"Section": "produce"
+		},
+		{
 			"Name": "chips",
 			"Section": "snacks"
 		}
@@ -16,5 +20,6 @@
 	"defaultColorDict": {
 		"dairy": "#4286f4",
 		"snacks": "#f47442",
+		"produce": "#45cc62"
 	}
 }
