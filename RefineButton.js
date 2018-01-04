@@ -20,8 +20,8 @@ export default class RefineButton extends React.Component {
     }
     return (
       <View style={styles.RefineButtonBox}>
-        <TouchableOpacity onPress={function() {console.log(section); this._toggle()}}>
-          <Text style={[styles.RefineButton,{backgroundColor: this.state.enabled? color: 'white', borderColor: color, borderWidth: 3}]}>{section}</Text>
+        <TouchableOpacity onPress={function() {console.log(section); this._toggle}}>
+          <Text extraData={this.state.enabled} style={[styles.RefineButton,{backgroundColor: this.state.enabled? color: 'white', borderColor: color, borderWidth: 3}]}>{section}</Text>
         </TouchableOpacity>
       </View>
     );
