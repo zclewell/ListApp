@@ -1,10 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 import styles from './style'
 
 export default class RefineButton extends React.Component {
+  _toggle() {
+    this.setState({enabled: !this.state.enabled})
+  }
+
   render() {
+    this.state = {enabled: true}
     var section = this.props.section
     var dict = this.props.dict
     var color = '#ffffffff'
@@ -15,7 +20,9 @@ export default class RefineButton extends React.Component {
     }
     return (
       <View style={styles.RefineButtonBox}>
-        <Text style={[styles.RefineButton,{backgroundColor: color}]}>{section}</Text>
+        <TouchableOpacity onPress={function() {console.log(section); this._toggle()}}>
+          <Text style={[styles.RefineButton,{backgroundColor: this.state.enabled? color: 'white', borderColor: color, borderWidth: 3}]}>{section}</Text>
+        </TouchableOpacity>
       </View>
     );
   }
