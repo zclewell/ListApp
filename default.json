@@ -5,12 +5,12 @@
 			"Section": "dairy"
 		},
 		{
-			"Name": "cheese",
-			"Section": "dairy"
-		},
-		{
 			"Name": "carrots",
 			"Section": "produce"
+		},
+		{
+			"Name": "cheese",
+			"Section": "dairy"
 		},
 		{
 			"Name": "chips",
@@ -18,8 +18,8 @@
 		}
 	],
 	"defaultColorDict": {
-		"dairy": "#4286f4",
 		"snacks": "#f47442",
+		"dairy": "#4286f4",
 		"produce": "#45cc62"
 	}
 }
