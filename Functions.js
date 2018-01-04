@@ -10,25 +10,14 @@ function compare(key) {
 
 module.exports = {
   singleCompare: function (key) {
-  	return function(a,b) {
-  		if (a[key] < b[key])
-    		return -1;
-  		if (a[key] > b[key])
-    		return 1;
-  		return 0;
-  	}
+  	return compare(key)
   },
   doubleCompare: function (first, second) {
-  	return function(a,b) {
-  		if (a[first] < b[first])
-    		return -1;
-  		if (a[first] > b[first])
-    		return 1;
-    	if (a[second] < b[second])
-    		return -1;
-  		if (a[second] > b[second])
-    		return 1;
-  		return 0;
+  	firstVal = compare(first)
+  	if (firstVal) {
+  		return firstVal
+  	} else {
+  		return compare(second)
   	}
   }
 };
