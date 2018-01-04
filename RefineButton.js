@@ -19,12 +19,14 @@ export default class RefineButton extends React.Component {
   render() {
     section = this.props.section
     dict = this.props.dict
-    color = '#ffffffff'
+    color = 'white'
+
     if (dict) {
       if (dict[section]) {
         color = dict[section]
       }
     }
+
     return (
       <View style={styles.RefineButtonBox}>
         <TouchableOpacity onPress={this._toggle.bind(this)}>

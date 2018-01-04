@@ -27,7 +27,6 @@ export default class App extends React.Component {
     } else {
       selected.add(key)
     }
-    // console.log(this.state.selected)
   }
 
   render() {
