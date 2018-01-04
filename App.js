@@ -15,6 +15,16 @@ var categorySet = new Set()
 
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { selected: new Set()}
+  }
+
+  _updateRefine(key) {
+    console.log({key})
+    // this.setState({ selected: this.state.selected.add()})
+  }
+
   render() {
     for (curr in list) {
       categorySet.add(list[curr].Section);
@@ -30,12 +40,14 @@ export default class App extends React.Component {
             data={list}
             renderItem={({item}) => <ListItem entry={item} dict={colorDict}/>}
             keyExtractor={(item, index) => index}
+            extraData={this.state.selected}
           />
         </View>
         <View>
           <FlatList
+            style={{bottom: 0}}
             data={categoryArr}
-            renderItem={({item}) => <RefineButton section={item} dict={colorDict}/>}
+            renderItem={({item}) => <RefineButton section={item} dict={colorDict} refineFunc={this._updateRefine.bind(this)}/>}
             keyExtractor={(item, index) => index}
             horizontal={true}
           />

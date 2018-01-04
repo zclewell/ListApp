@@ -21,14 +21,16 @@ module.exports = StyleSheet.create({
   	paddingLeft: 5,
   },
   RefineButtonBox: {
-    paddingTop: 10,
-    paddingBottom: 10,
+    // paddingTop: 10,
+    // paddingBottom: 15,
     paddingLeft: 5,
-    paddingRight: 5,
+    // paddingRight: 5,
   },
   RefineButton: {
+    textAlign: 'center',
     padding: 10,
     borderRadius: 10,
+    borderWidth: 0.5
   },
   ListItemSectionBox: {
   	padding: 10,
