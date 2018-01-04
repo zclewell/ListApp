@@ -5,7 +5,6 @@ import styles from './style'
 import ListItem from './ListItem'
 import RefineButton from './RefineButton'
 
-// require('./Functions')
 import Functions from './Functions'
 
 const defaultSettings = require('./default.json')
@@ -21,8 +20,13 @@ export default class App extends React.Component {
   }
 
   _updateRefine(key) {
-    console.log({key})
-    // this.setState({ selected: this.state.selected.add()})
+    // console.log(key)
+    // if (this.state.selected.contains(key)) {
+    //   this.setState({ selected: this.state.selected.delete(key)})
+    // } else {
+    //   this.setState({ selected: this.state.selected.add(key)})
+    // }
+    // console.log(this.state.selected)
   }
 
   render() {
@@ -38,7 +42,7 @@ export default class App extends React.Component {
         <View style={{height: '90%'}}>
           <FlatList
             data={list}
-            renderItem={({item}) => <ListItem entry={item} dict={colorDict}/>}
+            renderItem={({item}) => <ListItem entry={item} dict={colorDict} selected={this.state.selected}/>}
             keyExtractor={(item, index) => index}
             extraData={this.state.selected}
           />

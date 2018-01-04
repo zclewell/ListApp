@@ -3,6 +3,8 @@ import { Alert, Text, View, TouchableOpacity } from 'react-native';
 
 import styles from './style'
 
+var section, dict, color
+
 export default class RefineButton extends React.Component {
   constructor(props) {
     super(props)
@@ -10,17 +12,15 @@ export default class RefineButton extends React.Component {
   }
 
   _toggle() {
-    // console.log(this.state)
     this.setState({enabled: !this.state.enabled})
-    this.props.refineFunc('test')
+    // this.props.refineFunc(this.props.section)
 
   }
 
   render() {
-    // this.state = {enabled: true}
-    var section = this.props.section
-    var dict = this.props.dict
-    var color = '#ffffffff'
+    section = this.props.section
+    dict = this.props.dict
+    color = '#ffffffff'
     if (dict) {
       if (dict[section]) {
         color = dict[section]
