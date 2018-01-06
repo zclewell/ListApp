@@ -10,16 +10,15 @@ import Functions from './Functions'
 const defaultSettings = require('./default.json')
 const colorDict = defaultSettings.defaultColorDict
 const list = defaultSettings.demoList
-var categorySet = new Set()
-var categoryArr
 
 var selected = new Set()
+var categorySet = new Set()
+var categoryArr
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = { refresh: true }
-    // var selected = this.state.selected
     for (curr in list) {
       categorySet.add(list[curr].Section)
       selected.add(list[curr].Section)
@@ -35,12 +34,12 @@ export default class App extends React.Component {
     } else {
       selected.add(key)
     }
-    console.log(selected)
+    // console.log(selected)
     this.setState({ refresh: !this.state.refresh })
   }
 
   render() {
-    console.log('call to render')
+    // console.log('call to render')
     return (
       <View style={styles.container}>
         <View style={{height: '90%'}}>

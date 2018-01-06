@@ -3,8 +3,6 @@ import { Alert, Text, View, TouchableOpacity } from 'react-native';
 
 import styles from './style'
 
-var section, dict, color
-
 export default class RefineButton extends React.Component {
   constructor(props) {
     super(props)
@@ -17,9 +15,9 @@ export default class RefineButton extends React.Component {
   }
 
   render() {
-    section = this.props.section
-    dict = this.props.dict
-    color = 'white'
+    var section = this.props.section
+    var dict = this.props.dict
+    var color = 'white'
 
     if (dict) {
       if (dict[section]) {
