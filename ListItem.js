@@ -20,14 +20,14 @@ export default class ListItem extends React.Component {
         color = dict[entry.Section]
       } 
     }
-    console.log(selected)
-    if (selected.has(entry.Section) || !selected.size) {
-    return (
-      <View style={styles.ListItem}>
-        <Text style={[styles.ListItemSectionBox,{backgroundColor: color}]}>{entry.Section}</Text>
-        <Text style={styles.ListItemNameBox}>{entry.Name}</Text>
-      </View>
-    );
+    // console.log(selected)
+    if (selected.has(entry.Section)) {
+      return (
+        <View style={styles.ListItem}>
+          <Text style={[styles.ListItemSectionBox,{backgroundColor: color}]}>{entry.Section}</Text>
+          <Text style={styles.ListItemNameBox}>{entry.Name}</Text>
+        </View>
+      );
     } else {
       return null;
     }  
